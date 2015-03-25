@@ -1,4 +1,7 @@
 %h1 This is now the placeholder
 - @activities.each do |activity|
-  %p= activity.date
+  %h3= link_to activity.date, activity
+  %p
+    = activity.duration.to_formatted_s(:time)
+    = activity.distance
   %p= activity.activity

@@ -5,3 +5,6 @@
   %p= @activity.distance
 
 = link_to "Home", root_path
+= link_to "Edit", edit_activity_path(@activity)
+= link_to "Delete", activity_path(@activity), method: :delete,
+  data: { confirm: "Are you sure?" }

@@ -24,9 +24,16 @@ class ActivitiesController < ApplicationController
   end
 
   def update
+    if @activity.update(activity_params)
+      redirect_to @activity
+    else
+      render 'edit'
+    end
   end
 
   def destroy
+    @activity.destroy
+    redirect_to root_path
   end
 
   private
