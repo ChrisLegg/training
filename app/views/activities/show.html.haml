@@ -1,0 +1,7 @@
+#activity
+  %h1= @activity.activity
+  %p= @activity.date.to_formatted_s(:long_ordinal) 
+  %p= @activity.duration.strftime("%H:%M")
+  %p= @activity.distance
+
+= link_to "Home", root_path

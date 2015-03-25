@@ -1,0 +1,9 @@
+= simple_form_for(@activity, html: { class: 'form-horizontal' }) do |f|
+  = f.input :date, label: "Date"
+  = f.input :activity, label: "Activity Type", input_html: { class: "form-control"}
+  = f.input :distance, label: "Distance", input_html: { class: "form-control"}
+  = f.input :duration, 
+    label: "Duration", 
+    include_blank: true
+  %br/
+  = f.button :submit
