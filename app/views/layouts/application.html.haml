@@ -1,0 +1,16 @@
+!!!
+%html
+%head
+  %title Training Log Application
+  = stylesheet_link_tag 'application', media: 'all'
+  = javascript_include_tag 'application'
+  = csrf_meta_tags
+%body
+  %nav.navbar.navbar-default
+    .container
+      .navbar-header
+        = link_to "Training Log", root_path, class: "navbar-brand"
+      %ul.nav.navbar-nav.navbar-right
+        %li= link_to "Add New Activity", new_activity_path
+  .container
+    = yield
